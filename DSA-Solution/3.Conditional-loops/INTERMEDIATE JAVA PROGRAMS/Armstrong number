@@ -1,0 +1,31 @@
+//  Program to check wheather a number is armstrong or not
+
+package Intermediate_java_progrms;
+
+import java.util.Scanner;
+
+public class Armstrong_number {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Please enter the number to be checked wheather it is armstrong or not ");
+        int num = in.nextInt();
+        int num2 = num;
+        int p = 0;
+        int sum = 0;
+        while (num>0) {
+            p = num%10;
+            sum = sum + (p *p* p);
+            num = num/10;
+        }
+
+        if (num2 == sum) {
+            System.out.println(sum+" is armstrong number");
+        }
+        else{
+            System.out.println(sum+"is not a armstrong number");
+        }
+
+        in.close();
+    }
+}
